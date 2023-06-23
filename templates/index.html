@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>Voice Assistant</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='search.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  <script src="{{ url_for('static', filename='js/popup.js') }}" defer ></script>
+  <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  
+</head>
+
+<body> 
+  <div class="popup">
+    <button id="close">&times;</button>
+    <h2>How to use</h2>
+    <p>
+        
+          Click on the mic icon.</br>
+          Click on allow mic access</br>
+          Start speaking</br>
+          Once done click on Recognize button</br>
+        
+    </p>
+    <a href="#" id="closepopup">Let's Go</a>
+</div> 
+  <img src="{{ url_for('static', filename='tapToSpeak.png') }}" class="icon" id = "recordButton"/>
+  <h3 id="instructionText">Tap To Speak</h3>
+  <button id="stopButton" disabled>Recognize</button>
+  <div id="formats">Format: start recording to see sample rate</div>
+  <div id = "response">
+    <span id = "querytext"></span><br>
+    <span id = "queryresponse"></span>
+  </div>
+ 
+  <!-- <script src="{{ url_for('static', filename='js/app.js') }}"  ></script>
+  <script src="{{ url_for('static', filename='js/recorder.js') }}"  ></script> -->
+  <script src="{{ url_for('static', filename='js/rec.js') }}"  ></script>
+</body>
+</html>
